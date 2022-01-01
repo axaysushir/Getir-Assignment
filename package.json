@@ -1,0 +1,27 @@
+{
+  "name": "Getir-Assignment",
+  "version": "1.0.0",
+  "description": "Getir coding assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axaysushir/Getir-Assignment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axaysushir/Getir-Assignment/issues"
+  },
+  "homepage": "https://github.com/axaysushir/Getir-Assignment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.4",
+    "nodemon": "^2.0.15"
+  }
+}
