@@ -4,7 +4,7 @@
   "description": "Getir coding assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server.js"
   },
   "repository": {
@@ -23,5 +23,9 @@
     "express": "^4.17.2",
     "mongoose": "^6.1.4",
     "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.5"
   }
 }
