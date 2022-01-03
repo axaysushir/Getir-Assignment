@@ -8,38 +8,39 @@ exports.postdata = async (req, res, next) => {
     //     });
     // }
     // send data
-    // console.log(req.body)
-    // const sendData = new App({
-    //     startDate: req.body.startDate,
-    //     endDate: req.body.endDate,
-    //     minCount: req.body.minCount,
-    //     maxCount: req.body.maxCount,
-    // })
+    console.log(req.body)
+    const sendData = new App({
+        startDate: req.body.startDate,
+        endDate: req.body.endDate,
+        minCount: req.body.minCount,
+        maxCount: req.body.maxCount,
+    })
 
-    // sendData.save().then(data => {
-    //     res.send(data)
-    // }).catch(err => {
-    //     res.status(500).send({
-    //         message: err.message || "Something went wrong while sending data!"
-    //     })
-    // })
+    sendData.save().then(data => {
+        res.send(data)
+        console.log("DATA FROM SERVER", data)
+    }).catch(err => {
+        res.status(500).send({
+            message: err.message || "Something went wrong while sending data!"
+        })
+    })
 
-    try {
-        const sendinfo = await App.find()
-        console.log(sendinfo);
-        return res.status(200).json({sendinfo})
-        // return res.status(200).json({
-        //     code: 0,
-        //     msg: "Success",
-        //     records: sendinfo
-        // })
-    } catch (error) {
-        console.log(error)
-        return res.status(500).json({
-            success: false,
-            error: "Server error"
-          });
-    }
+    // try {
+    //     const sendinfo = await App.find()
+    //     console.log(sendinfo);
+    //     return res.status(200).json({sendinfo})
+    //     // return res.status(200).json({
+    //     //     code: 0,
+    //     //     msg: "Success",
+    //     //     records: sendinfo
+    //     // })
+    // } catch (error) {
+    //     console.log(error)
+    //     return res.status(500).json({
+    //         success: false,
+    //         error: "Server error"
+    //       });
+    // }
 }
 
 exports.send = (req, res) => {
