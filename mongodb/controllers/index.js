@@ -25,6 +25,8 @@ exports.postdata = async (req, res, next) => {
         })
     })
 
+    // have tried below code also but it retuns empty array as response
+
     // try {
     //     const sendinfo = await App.find()
     //     console.log(sendinfo);
@@ -43,17 +45,17 @@ exports.postdata = async (req, res, next) => {
     // }
 }
 
-exports.send = (req, res) => {
-    const post = new App({
-        code: req.body.code,
-        msg: req.body.msg,
-        records: req.body.record
-    })
-    post.save().then(data => {
-        res.send(data)
-    }).catch(err => {
-        res.status(500).send({
-            message: err.message || "Something went wrong while sending data!"
-        })
-    })
-}
+// exports.send = (req, res) => {
+//     const post = new App({
+//         code: req.body.code,
+//         msg: req.body.msg,
+//         records: req.body.record
+//     })
+//     post.save().then(data => {
+//         res.send(data)
+//     }).catch(err => {
+//         res.status(500).send({
+//             message: err.message || "Something went wrong while sending data!"
+//         })
+//     })
+// }
