@@ -1,5 +1,6 @@
 const App = require('../models/model')
 
+// this function post and save data in DB collection 
 exports.postdata = async (req, res, next) => {
     // Validate request
     // if(!req.body.content) {
